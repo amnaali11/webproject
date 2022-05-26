@@ -582,7 +582,7 @@ font-size: 17px;
                 if(arr[i]==" ")
                 space1++;
                        }
-            if (cont1>=1&&arr[0] === arr[0].toUpperCase()&&spcial1==1 &&arr.length == 8&&space1==0) {
+            if (cont1>=1&&isNaN(arr[0])&&arr[0] === arr[0].toUpperCase()&&spcial1==1 &&arr.length == 8&&space1==0) {
                 textpass1.innerHTML = "";
 
             }
@@ -614,7 +614,7 @@ font-size: 17px;
             if (arr[i] == " ")
              space++;
             }
- if (special==1&&arr[0]===arr[0].toUpperCase()&&cont>=1&&arr.length==8&&space==0) {
+ if (special==1&&isNaN(arr[0])&&arr[0]===arr[0].toUpperCase()&&cont>=1&&arr.length==8&&space==0) {
 
                 textpass.innerHTML = "";
             }
