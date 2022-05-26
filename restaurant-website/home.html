@@ -349,22 +349,6 @@ height: 100px;
 
   }
   
-  #eye,#eye1{
-    position:absolute;
-    margin-top: 17px;
-    right:10px;
-
-  }
-  #eyea,#eyea1{
-
-    position:absolute;
-    margin-top: 17px;
-    margin-left: -30px;;
-
-    display: none;
-
-
-  }
   .input-field{
 font-family:sans-serif;
 font-size: 17px;
@@ -474,8 +458,6 @@ font-size: 17px;
                     <input type='text' class='input-field' placeholder='Email' id="email1" required>
                     <span class="textemail1"></span>
                     <input type='password' class='input-field' placeholder='Enter Password' id="pass1" required>
-                    <i class="fa fa-eye-slash"aria-hidden="true"id="eye1"onclick="show1()"></i>
-                    <i class="fa fa-eye"aria-hidden="true"id="eyea1"onclick="show1()"></i>
 
                   <br><br>
                     <span id="textpass1"></span><br><br>
@@ -634,58 +616,8 @@ arr[i]=='"')
             }
         });
 
-function show(){
-let eye=document.getElementById("eye");
-let input=document.getElementById("pass");
-let eyea=document.getElementById("eyea");
-
-if(input.type==="password")
-{input.type="text";
-
-eyea.style.display="none";
-eye.style.display="inline";
 
 
-
-}
-else
-{input.type="password";
-
-eye.style.display="none";
-eyea.style.display="inline";
-
-
-
-}
-
-}
-
-
-function show1(){
-let eye1=document.getElementById("eye1");
-let input=document.getElementById("pass1");
-let eyea1=document.getElementById("eyea1");
-
-if(input.type==="password")
-{input.type="text";
-
-eyea1.style.display="none";
-eye1.style.display="inline";
-
-
-
-}
-else
-{input.type="password";
-
-eye1.style.display="none";
-eyea1.style.display="inline";
-
-
-
-}
-
-}
 
 
 
