@@ -25,24 +25,4 @@ photo1.style.backgroundImage=photo;
 
 });
 
-var modal = document.getElementById('login-form');
-        window.onclick = function(event) 
-        {
-            if (event.target == modal) 
-            {
-                modal.style.display = "none";
-            }
-        }
-/*
-function word(){
 
-document.getElementById("word").innerText="Welcome To Restaurant";
-document.getElementById("img").style.display="visibility";
-
-
-
-
-
-
-
-}*/
