@@ -416,7 +416,7 @@ font-size: 17px;
                     <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
                     <button type='button' onclick='register()' class='toggle-btn'>Register</button>
                 </div>
-                <form id='register' class='input-group-register' action="index.html" method="get">
+                <form id='register' class='input-group-register' action="index.html" method="get" autocomplete="on">
 
 
                     <input type='text' class='input-field' placeholder='First Name' id="fname" required>
@@ -438,9 +438,7 @@ font-size: 17px;
                     <br>
 
                     <label class="checkpassword">
-                        <input type='password' class='input-field' placeholder='Enter Password' id="pass" required     >
-                        <i class="fa fa-eye-slash"aria-hidden="true" id="eye"onclick="show()"style=></i>
-                        <i class="fa fa-eye"aria-hidden="true"id="eyea"onclick="show()"></i>
+                        <input type='password'  class='input-field' placeholder='Enter Password' id="pass" required     >
 
                         <br><br>
                         <span id="textpass"></span>
@@ -454,7 +452,7 @@ font-size: 17px;
                     <button type='submit' class='submit-btn'>Register</button>
                     <br><br>
                 </form>
-                <form id='login' class='input-group-login' action="index.html" method="get">
+                <form id='login' class='input-group-login' action="index.html" method="get" autocomplete="on">
                     <input type='text' class='input-field' placeholder='Email' id="email1" required>
                     <span class="textemail1"></span>
                     <input type='password' class='input-field' placeholder='Enter Password' id="pass1" required>
