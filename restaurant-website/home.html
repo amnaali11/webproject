@@ -449,7 +449,7 @@ font-size: 17px;
                     <input type="radio" name="type"><span class="type">female</span>
                     <br><br>
 
-                    <button type='submit' class='submit-btn'>Register</button>
+                    <button type='submit'id="submit" class='submit-btn'>Register</button>
                     <br><br>
                 </form>
                 <form id='login' class='input-group-login' action="index.html" method="get" autocomplete="on">
@@ -460,16 +460,18 @@ font-size: 17px;
                   <br><br>
                     <span id="textpass1"></span><br><br>
                     <input type='checkbox' class='check-box'><span class="type">Remember Password</span>
-                    <button type='submit' class='submit-btn'>Log in</button>
+                    <button type='submit'id="submit1" class='submit-btn'>Log in</button>
                 </form>
 
             </div>
         </div>
     </div>
-    <script defer>
+    <script>
 
 
 
+        let submit=document.getElementById("submit");
+        let submit1=document.getElementById("submit1");
 
         var x = document.getElementById('login');
         var y = document.getElementById('register');
@@ -497,6 +499,8 @@ font-size: 17px;
 
                 emailText.innerHTML = "your email is not valid";
                 emailText.style.color = "red";
+		    submit.setAttribute("disabled");
+
 
             }
         });
@@ -511,6 +515,7 @@ font-size: 17px;
 
                 emailText1.innerHTML = "your email is not valid";
                 emailText1.style.color = "red";
+		    submit1.setAttribute("disabled");
 
             }
         });
@@ -535,6 +540,7 @@ font-size: 17px;
 
                 textphone.innerHTML = "your  phone number is not valid";
                 textphone.style.color = "red";
+		    submit.setAttribute("disabled");
 
 
 
@@ -577,6 +583,7 @@ arr[i]=='"')
               
                 textpass1.innerHTML = "your password is not valid";
                 textpass1.style.color = "red";
+		    submit1.setAttribute("disabled");
 
 
             }
@@ -611,6 +618,8 @@ arr[i]=='"')
             else {
                 textpass.innerHTML = "your password is not valid";
                 textpass.style.color = "red";
+		    		    submit.setAttribute("disabled");
+
             }
         });
 
@@ -635,6 +644,7 @@ if(cont>0)
 {
 textname.innerHTML="Name is not vaild";
 textname.style.color="red";
+submit.setAttribute("disabled");
 
 }
 else
@@ -656,6 +666,7 @@ if(cont>0)
 {
 textname1.innerHTML="Name is not vaild";
 textname1.style.color="red";
+submit1.setAttribute("disabled");
 
 }
 else
