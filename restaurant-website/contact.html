@@ -740,7 +740,7 @@ Lorem ipsum dolor sit amet, con sectetur adipiscing elit.  Suspen disse vitae li
 
             <textarea name="message" class="input" required></textarea>
           </div>
-          <input type="submit" value="Send" class="btn" />
+          <input type="submit"id="submit" value="Send" class="btn" />
         </form>
       </div>
     </div>
@@ -771,6 +771,8 @@ Lorem ipsum dolor sit amet, con sectetur adipiscing elit.  Suspen disse vitae li
 <script>
 
 const email = document.getElementById("email");
+	        let submit=document.getElementById("submit");
+
         email.addEventListener('input',()=>{
 			const emailText = document.querySelector('#textemail');
 			const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
@@ -782,6 +784,8 @@ const email = document.getElementById("email");
 				
 				emailText.innerHTML = "your email is not valid";
                 emailText.style.color="red";
+				submit.setAttribute("disabled");
+
                 
 			}
 		});
@@ -809,6 +813,7 @@ const phone= document.getElementById("phone");
   textphone.innerHTML = "your  phone number is not valid"; 
   textphone.style.color="red";
 
+submit.setAttribute("disabled");
 
 }
 
