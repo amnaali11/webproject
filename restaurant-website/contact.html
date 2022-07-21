@@ -780,10 +780,13 @@ const email = document.getElementById("email");
 			if(email.value.match(emailPattern)){
 				
 				emailText.innerHTML = ""; 
+                submit.disabled=false;
+
 			}else{
 				
 				emailText.innerHTML = "your email is not valid";
                 emailText.style.color="red";
+                submit.disabled=true;
 
                 
 			}
@@ -800,6 +803,8 @@ const phone= document.getElementById("phone");
       {
 	
         textphone.innerHTML = ""; 
+        submit.disabled=false;
+
 
 
       }
@@ -811,6 +816,8 @@ const phone= document.getElementById("phone");
 	
   textphone.innerHTML = "your  phone number is not valid"; 
   textphone.style.color="red";
+  submit.disabled=true;
+
 
 
 }
