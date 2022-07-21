@@ -449,7 +449,7 @@ font-size: 17px;
                     <input type="radio" name="type"><span class="type">female</span>
                     <br><br>
 
-                    <button type='submit'id="submit" class='submit-btn'>Register</button>
+                    <button type='submit'id="submit" class='submit-btn' >Register</button>
                     <br><br>
                 </form>
                 <form id='login' class='input-group-login' action="index.html" method="get" autocomplete="on">
@@ -460,7 +460,7 @@ font-size: 17px;
                   <br><br>
                     <span id="textpass1"></span><br><br>
                     <input type='checkbox' class='check-box'><span class="type">Remember Password</span>
-                    <button type='submit'id="submit1" class='submit-btn'>Log in</button>
+                    <button type='submit'id="submit1" class='submit-btn'onclick="done()">Log in</button>
                 </form>
 
             </div>
@@ -488,21 +488,26 @@ font-size: 17px;
             z.style.left = '0px';
         }
         const email = document.getElementById("email");
+        const emailText = document.querySelector('.textemail');
+
         email.addEventListener('input', () => {
-            const emailText = document.querySelector('.textemail');
             const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
 
             if (email.value.match(emailPattern)) {
 
                 emailText.innerHTML = "";
+                submit.disabled=false;
+
             } else {
 
                 emailText.innerHTML = "your email is not valid";
                 emailText.style.color = "red";
+                submit.disabled=true;
 
 
 
             }
+
         });
         const email1 = document.getElementById("email1");
         email1.addEventListener('input', () => {
@@ -511,10 +516,14 @@ font-size: 17px;
             if (email1.value.match(emailPattern1)) {
 
                 emailText1.innerHTML = "";
+                submit1.disabled=false;
+
             } else {
 
                 emailText1.innerHTML = "your email is not valid";
                 emailText1.style.color = "red";
+                submit1.disabled=true;
+
 
 
             }
@@ -529,6 +538,8 @@ font-size: 17px;
             if (phone.value.length == 11 && isFinite(phone.value)) {
 
                 textphone.innerHTML = " ";
+                submit.disabled=false;
+
 
 
             }
@@ -540,6 +551,8 @@ font-size: 17px;
 
                 textphone.innerHTML = "your  phone number is not valid";
                 textphone.style.color = "red";
+                submit.disabled=true;
+
 
 
 
@@ -574,6 +587,8 @@ arr[i]=='"')
                        }
             if (cont1>=1&&isNaN(arr[0])&&arr[0] === arr[0].toUpperCase()&&spcial1==1 &&arr.length == 8&&space1==0) {
                 textpass1.innerHTML = "";
+                submit1.disabled=false;
+
 
             }
 
@@ -582,6 +597,8 @@ arr[i]=='"')
               
                 textpass1.innerHTML = "your password is not valid";
                 textpass1.style.color = "red";
+                submit1.disabled=true;
+
 
 
 
@@ -613,10 +630,14 @@ arr[i]=='"')
  if (special==1&&isNaN(arr[0])&&arr[0]===arr[0].toUpperCase()&&cont>=1&&arr.length==8&&space==0) {
 
                 textpass.innerHTML = "";
+                submit.disabled=false;
+
             }
             else {
                 textpass.innerHTML = "your password is not valid";
                 textpass.style.color = "red";
+                submit.disabled=true;
+
 
 
             }
@@ -643,10 +664,13 @@ if(cont>0)
 {
 textname.innerHTML="Name is not vaild";
 textname.style.color="red";
+submit.disabled=true;
 
 }
-else
+else{
 textname.innerHTML="";
+submit.disabled=false;
+}
 
 
 })
@@ -664,13 +688,19 @@ if(cont>0)
 {
 textname1.innerHTML="Name is not vaild";
 textname1.style.color="red";
+submit.disabled=true;
+
 
 }
-else
+else{
 textname1.innerHTML="";
+submit1.disabled=false;
+}
 
 
 })
+
+
 
 
 
